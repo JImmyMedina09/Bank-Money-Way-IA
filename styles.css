@@ -1,0 +1,226 @@
+/* Estilos generales */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(145deg, #F3C4FB, #6C5B7B, #355C7D);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: white;
+}
+
+/* Caja de login */
+.login-box {
+    background: rgba(255, 255, 255, 0.15);
+    padding: 40px;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 320px;
+    position: absolute;
+}
+
+.icon-circle {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.icon-user {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #6C5B7B;
+    position: relative;
+}
+
+.icon-user::before {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 55px;
+    height: 30px;
+    background-color: #6C5B7B;
+    border-radius: 25px;
+}
+
+h2 {
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.login-form label {
+    color: #ffffff;
+    align-self: flex-start;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.login-form input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    margin-bottom: 15px;
+    background: rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+    font-size: 16px;
+    backdrop-filter: blur(5px);
+}
+
+.login-form input:focus {
+    border: 1px solid #FFFFFF;
+    outline: none;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #6C5B7B;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #355C7D;
+}
+
+.error-message {
+    color: red;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.success-message {
+    color: #4CAF50;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+/* Menú de opciones */
+.menu-container {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.1);
+    width: 360px;
+    text-align: center;
+    display: none;
+}
+
+.header {
+    margin-bottom: 30px;
+}
+
+.header h2 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.header p {
+    margin: 5px 0;
+    font-size: 16px;
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.menu-item {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 20px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.menu-item:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.menu-icon {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+    border-radius: 50%;
+    background-color: #6C5B7B;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    color: white;
+}
+
+.saldo-icon::before {
+    content: "💰";
+}
+
+.retiro-icon::before {
+    content: "💸";
+}
+
+.consignar-icon::before {
+    content: "💳";
+}
+
+.salir-icon::before {
+    content: "🚪";
+}
+
+/* Estilos para el formulario */
+.formulario-container {
+    margin-top: 20px;
+    text-align: left;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    border-radius: 8px;
+    display: none;
+}
+
+.formulario-container input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.formulario-container button {
+    margin-top: 10px;
+    padding: 10px;
+    width: 100%;
+    background-color: #6C5B7B;
+    border: none;
+    color: white;
+    border-radius: 8px;
+}

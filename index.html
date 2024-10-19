@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank Money Way - Login</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body onload="mostrarFechaHora()">
+
+    <!-- Caja de inicio de sesión -->
+    <div id="login-box" class="login-box">
+        <div class="login-icon">
+            <div class="icon-circle">
+                <div class="icon-user"></div>
+            </div>
+        </div>
+        <h2>Bank Money Way</h2>
+        <div class="login-form">
+            <label for="email">Número de Identificación</label>
+            <input type="text" id="email" placeholder="Ingresa tu ID" required>
+            <label for="password">Contraseña</label>
+            <input type="password" id="password" placeholder="Ingresa tu contraseña" required>
+            <button onclick="validarUsuario()">Iniciar Sesión</button>
+            <p>¿No tienes una cuenta? <a href="#" onclick="mostrarRegistro()">Regístrate</a></p>
+            <p id="error-message" class="error-message"></p>
+        </div>
+    </div>
+
+    <!-- Caja de registro -->
+    <div id="register-box" class="login-box" style="display: none;">
+        <h2>Registrar Usuario</h2>
+        <div class="login-form">
+            <label for="documento-register">Número de Documento</label>
+            <input type="text" id="documento-register" placeholder="Número de Documento" required>
+            <label for="nombre-register">Nombre de Usuario</label>
+            <input type="text" id="nombre-register" placeholder="Nombre de Usuario" required>
+            <label for="password-register">Contraseña</label>
+            <input type="password" id="password-register" placeholder="Contraseña" required>
+            <button onclick="registrarUsuario()">Registrarse</button>
+            <p>¿Ya tienes una cuenta? <a href="#" onclick="mostrarLogin()">Inicia Sesión</a></p>
+            <p id="register-error-message" class="error-message"></p>
+        </div>
+        <p id="registro-mensaje" class="success-message"></p> <!-- Mensaje de éxito en registro -->
+    </div>
+
+    <!-- Menú de opciones del cajero -->
+    <div id="menu-box" class="menu-container" style="display: none;">
+        <div class="header">
+            <h2>Bienvenido, <span id="nombre-usuario"></span></h2>
+            <p>Fecha y Hora: <span id="fecha-hora"></span></p>
+        </div>
+        <div class="menu-grid">
+            <div class="menu-item" onclick="mostrarFormulario('saldo')">
+                <div class="menu-icon saldo-icon"></div>
+                <p>Consultar Saldo</p>
+            </div>
+            <div class="menu-item" onclick="mostrarFormulario('retiro')">
+                <div class="menu-icon retiro-icon"></div>
+                <p>Retirar</p>
+            </div>
+            <div class="menu-item" onclick="mostrarFormulario('consignar')">
+                <div class="menu-icon consignar-icon"></div>
+                <p>Consignar</p>
+            </div>
+            <div class="menu-item" onclick="salir()">
+                <div class="menu-icon salir-icon"></div>
+                <p>Salir</p>
+            </div>
+        </div>
+        <p id="saldo-actual"></p>
+
+        <!-- Contenedor donde se mostrará el formulario para las operaciones -->
+        <div id="formulario-container" class="formulario-container">
+            <!-- Aquí se cargarán los formularios según la opción seleccionada -->
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
